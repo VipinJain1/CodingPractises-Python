@@ -7,7 +7,6 @@ Created on Wed Jul 21 13:58:18 2021
 
 import random as rd
 
-
 def reArrange_Plus_Minus_Numbers_Sort(nums):
     return sorted (nums)
         
