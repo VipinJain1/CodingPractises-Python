@@ -1,4 +1,11 @@
 """
+
+Created on Thu Jul 22 07:33:24 2021
+
+@author: VIP
+
+https://www.geeksforgeeks.org/total-numbers-no-repeated-digits-range/
+
 Total numbers with no repeated digits in a range
 Difficulty Level : Medium
 Last Updated : 30 Dec, 2019

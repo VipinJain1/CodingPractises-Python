@@ -1,5 +1,9 @@
 """
+Created on Thu Jul 22 07:33:24 2021
 
+@author: VIP
+
+https://www.geeksforgeeks.org/smallest-subarray-with-all-occurrences-of-a-most-frequent-element/
 
 Smallest subarray with all occurrences of a most frequent element
 Difficulty Level : Medium

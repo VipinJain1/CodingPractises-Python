@@ -5,6 +5,13 @@ Created on Tue Jul 20 13:42:57 2021
 Array Rotations
 
 @author: VIP
+
+https://www.geeksforgeeks.org/array-rotation/
+
+Program for array rotation
+
+Write a function rotate(ar[], d, n) that rotates arr[] of size n by d elements. 
+
 """
 
 import random

@@ -4,6 +4,15 @@ Created on Fri Jul  2 23:31:29 2021
 Find Whether Two Strings are Permutation of each other
 
 @author: VIP
+
+https://www.geeksforgeeks.org/check-if-two-strings-are-permutation-of-each-other/
+
+Check if two strings are permutation of each other
+
+Write a function to check whether two given strings are Permutation of each other or not. 
+A Permutation of a string is another string that contains same characters, only the order of characters can be different. 
+For example, “abcd” and “dabc” are Permutation of each other
+
 """
 
 

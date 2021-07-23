@@ -3,6 +3,32 @@
 Created on Wed Jul 21 11:04:08 2021
 
 @author: VIP
+
+https://www.geeksforgeeks.org/find-maximum-element-row-matrix/
+
+Find maximum element of each row in a matrix
+Difficulty Level : Basic
+Last Updated : 08 Jun, 2021
+Given a matrix, the task is to find the maximum element of each row.
+Examples: 
+ 
+
+Input :  [1, 2, 3]
+         [1, 4, 9]
+         [76, 34, 21]
+
+Output :
+3
+9
+76
+
+Input : [1, 2, 3, 21]
+        [12, 1, 65, 9]
+        [1, 56, 34, 2]
+Output :
+21
+65
+56
 """
 
 def findMaxElemRowWiseInMatrix(mat):

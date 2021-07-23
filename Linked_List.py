@@ -1,3 +1,21 @@
+"""
+
+Created on Thu Jul 22 07:33:24 2021
+
+@author: VIP
+
+https://www.geeksforgeeks.org/linked-list-set-2-inserting-a-node/
+
+Linked List | Set 2 (Inserting a node)
+Difficulty Level : Easy
+Last Updated : 28 Jun, 2021
+ 
+We have introduced Linked Lists in the previous post. We also created a simple linked list with 3 nodes and discussed linked list traversal.
+All programs discussed in this post consider the following representations of linked list. 
+
+"""
+
+
 import random
 import sys
 
@@ -33,7 +51,7 @@ class LinkedList():
                 print ("Delete first node", self.ptr.data)
                 del self.ptr.data
                         
-              
+    #https://www.geeksforgeeks.org/delete-a-linked-list-node-at-a-given-position/          
     def deleteNodeMiddle(self,num):
            if self.head is None:
                 print ("No Node to delete")
