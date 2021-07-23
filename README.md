@@ -1,2 +1,3 @@
 # CodingPractises
-Just Refresh Your skills Vipin... 
+
+Solve some Geeks4Geeks problems
