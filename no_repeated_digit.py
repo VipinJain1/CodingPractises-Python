@@ -20,10 +20,10 @@ where as 11 has repeated digit.
 Input : 1 100
 """
 
-def noRepeateDigits(s,d):
+def noRepeateDigits(lst):
     d=[]
     
-    for i in range(s,e+1,1):
+    for i in lst:
         if i <10:
             d.append((i))
         elif str(i) ==  ''.join(set(str(i))):
@@ -31,8 +31,8 @@ def noRepeateDigits(s,d):
     return d
             
 
+import random
 
-s=9
-e=89
+lst = random.sample(range(1,100),50)
 
-print (noRepeateDigits (s,e))
+print (noRepeateDigits (lst))
