@@ -30,6 +30,24 @@ nums = [1,1,2]
 nums = [0,0,1,1,1,2,2,3,3,4]
 nums = [1,1]
 nums = [1,1,2]
+
+class Solution:
+    def removeDuplicates(self, nums: List[int]) -> int:
+        d  = dict()
+        new = []
+        for i in nums:
+            d[i] =1
+
+        for i in d.keys():
+            new.append(i)
+
+        for i in range (len (new)):
+            nums[i] = new [i]
+        return (len(new))    
+
+
+
+"""
 n = len (nums)
 #print (ln)
 cnt =0
@@ -48,6 +66,6 @@ print (i)
 print (cnt)            
 print (nums[0:cnt])   
     
-
+"""
     
     
