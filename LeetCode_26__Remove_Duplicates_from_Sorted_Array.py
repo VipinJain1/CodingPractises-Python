@@ -25,13 +25,29 @@ https://leetcode.com/problems/remove-duplicates-from-sorted-array/
 @author: VIP
 """
 
-s = "b a "
 
-s = s.strip()
+nums = [1,1,2]
+nums = [0,0,1,1,1,2,2,3,3,4]
+nums = [1,1]
+nums = [1,1,2]
+n = len (nums)
+#print (ln)
+cnt =0
+i =0
+while (cnt<n-1 and i <n):
+  
+    if nums[cnt] == nums[cnt+1]:
+        while nums[cnt] == nums[cnt+1]:
+            cnt = cnt+1
+    else:
+        nums[i] = nums[cnt]
+        i = i+1
+        cnt = cnt+1
 
-if (len (s) ==1):
-    print ( 1)
-elif (len (s) ==0):
-    print ( 0)
-else:
-    print (len((s[::-1].split(' '))[0]))
+print (i)
+print (cnt)            
+print (nums[0:cnt])   
+    
+
+    
+    
