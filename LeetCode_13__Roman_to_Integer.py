@@ -2,7 +2,7 @@
 """
 Created on Wed Jul 28 20:24:03 2021
 
-# NOT WORKING
+# WORKING CODE
 
 13. Roman to Integer
 
@@ -33,19 +33,19 @@ https://leetcode.com/problems/roman-to-integer/
 
 
 s = "MCMXCIV"
-s="LVIII"
+s = "MCDLXXVI"
+#s="LVIII"
 #s="IX"
-s ="III"
+#s ="III"
+s = "MMCCCXCIX"
 roman =  {
     
     "I":1,
     "II" :2,
-    "III":3,
     "IV":4,
     "V" :5,
     "VI":6,
     "VII":7,
-    "VIII":8,
     "IX" :9,
     "X" :10,
     "L" : 50,
@@ -54,7 +54,6 @@ roman =  {
     "M" : 1000,
     "XL" : 40,
     "XC" : 90,
-    "CX" :110,
     "CD" : 400,
     "CM" : 900
     
@@ -63,23 +62,23 @@ roman =  {
 def roman2Int(roman,s):
     l = len(s)
     num =0
-    if l%2 !=0:
-        num = int (roman[s[0]])
-        s = s[1:]
-        l = len(s)
-        
     cnt =0
     
     while (cnt <l):
-        if  s[cnt+0] + s[cnt+1] in roman.keys():
-            num = num + int (roman [s[cnt+0] + s[cnt+1]])
+        
+        if(l - cnt >=2):
+            
+            if ((s[cnt+0] + s[cnt+1]) in roman.keys()):
+                num = num + int (roman [s[cnt+0] + s[cnt+1]])
+                cnt  = cnt+2
+            else:
+                num = num +  (int (roman[s[cnt+0]]))
+                cnt = cnt+1
         else:
-            num = num +  (int (roman[s[cnt+0]]) + int (roman [s[cnt+1]]))
-        cnt  = cnt+2
-        
+            num = num +  (int (roman[s[cnt+0]]))
+            cnt = cnt+1  
     return num    
-        
-        
+      
 print (roman2Int(roman,s))
 
 
