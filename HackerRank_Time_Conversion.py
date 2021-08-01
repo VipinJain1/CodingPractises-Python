@@ -25,17 +25,19 @@ Function Description
 def timeConversion(s):
     # Write your code here
     
-   
+    ## AM Logic
     if 'pm' not in  s.lower():
         if s[0:2] == 12:
             hr = '00'
             return (hr + s[2:len(s) -2])
         else:
             return (s[0:len(s) -2])
+    ## PM Logic
     else:
-        if str == '12:00:00PM':
-            return '12:00:00'
+        if (s[0:2] == '12'):
+            hr = '12'
+            return (hr + s[2:len(s) -2])
         
         else:
-            hr = str ( int(s[0:2] ) + 12)
+            hr = str( int(s[0:2] ) + 12)
             return (hr + s[2:len(s) -2])
