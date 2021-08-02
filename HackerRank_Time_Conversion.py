@@ -21,13 +21,13 @@ Function Description
 @author: VIP
 """
 
-
+s = '12:00:00AM'
 def timeConversion(s):
     # Write your code here
     
     ## AM Logic
     if 'pm' not in  s.lower():
-        if s[0:2] == 12:
+        if s[0:2] == '12':
             hr = '00'
             return (hr + s[2:len(s) -2])
         else:
@@ -40,4 +40,7 @@ def timeConversion(s):
         
         else:
             hr = str( int(s[0:2] ) + 12)
-            return (hr + s[2:len(s) -2])
+            return (hr + s[2:len(s) -2]
+)
+
+print (timeConversion(s))
