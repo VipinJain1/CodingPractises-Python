@@ -11,22 +11,26 @@ difference between any two elements is less than or equal to .
 """
 
 
-
 a = [1,1,2,3,4,4,5,5,5]
+a =[4, 6, 5, 3, 3, 1]
 
-maxnums =0
-count=0
-
-for i in range (len(a)-1):
-    count =0
-    for j in range ( i+1, len(a)-1):
-        
-        if (abs (a[i] - a[j]) <=1):
-            while ((abs (a[i] - a[j]) <=1) and j<= len(a) -1):
-                count = count +1
-                j= j+1
-             
-            if maxnums < count:
-                maxnums = count
+def pickingNumbers(a):
+    # Write your code here
     
+    count =1 
+    ln = len(a)
+    longest =0
+    while (count <=ln):
+        if abs(sum (a[0:count]) - sum (a[count+1:ln-1]))  <=1:
+             if len(a[count+1:ln-1]) > len(a[0:count]):
+                 longest = len(a[count+1:ln-1])
+             else:
+                 longest = len(a[0:count])
         
+        count  = count +1    
+        
+    return longest 
+            
+    
+
+print (pickingNumbers(a))
