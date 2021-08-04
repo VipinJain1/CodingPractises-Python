@@ -11,10 +11,13 @@ def saveThePrisoner(n, m, s):
     
     if (m ==1):
          return (s) 
-    if n==0:
+    
+    if m<1:
+         return 0
+    if n <=0:
         return  0
     
-    if s ==0:
+    if s <=0:
         return 0
     
     if n<s:
@@ -33,8 +36,8 @@ def saveThePrisoner(n, m, s):
         m = m-1
     return s    
 
-n = 999999999 
-m = 999999999 
-s = 1
+n = 5
+m = 2
+s = 2
     
 print (saveThePrisoner(n,m,s))
