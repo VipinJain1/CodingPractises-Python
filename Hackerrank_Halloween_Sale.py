@@ -5,16 +5,6 @@ Created on Tue Aug  3 14:03:15 2021
 @author: VIP
 """
 
-p =20 # initail code of game
-d =3  # to give further discount after each purchase
-m =0  # base price to sell
-s =80 # total money
-
-
-p = 100 
-d = 19 
-m = 1 
-s = 180
 
 def howManyGames(p, d, m, s):
     # Return the number of games you can buy
@@ -26,12 +16,14 @@ def howManyGames(p, d, m, s):
     totalMoney = s
     IsDiscountApplied = False 
     
+    
     if initailCost > totalMoney:
         return 0
     
-    if  p ==0 or m==0 or s ==0:
+    if  initailCost <=0 or totalMoney <=0:
         return  0
-    
+    if basePrice <=0:
+        basePrice=1
     
     if basePrice == initailCost:
         return totalMoney//basePrice
@@ -57,6 +49,14 @@ def howManyGames(p, d, m, s):
     else:
         totalGames = totalGames + totalMoney//(initailCost - discountToApply)
             
-    return totalGames
+    if totalGames <0:
+        return 0
+    else:
+        return totalGames
+
+p =10000 # initail cost of game
+d =10009  # to give further discount after each purchase
+m =1000  # base price to sell
+s =180000 # total money
 
 print (howManyGames(p, d, m, s))
