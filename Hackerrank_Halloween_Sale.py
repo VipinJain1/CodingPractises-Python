@@ -16,6 +16,9 @@ def howManyGames(p, d, m, s):
     totalMoney = s
     IsDiscountApplied = False 
     
+    origBasePrice = m
+    origtotalMoney = s
+    originitailCost =p 
     
     if initailCost > totalMoney:
         return 0
@@ -25,8 +28,8 @@ def howManyGames(p, d, m, s):
     if basePrice <=0:
         basePrice=1
     
-    if basePrice == initailCost:
-        return totalMoney//basePrice
+    if origBasePrice == originitailCost:
+        return origtotalMoney//origBasePrice
         
     totalMoney = totalMoney - initailCost
    
@@ -47,16 +50,21 @@ def howManyGames(p, d, m, s):
         if (totalMoney):
             totalGames = totalGames + totalMoney//basePrice
     else:
-        totalGames = totalGames + totalMoney//(initailCost - discountToApply)
-            
+        try:
+            if initailCost - discountToApply ==0: 
+                totalGames = totalGames + totalMoney//1
+            else:
+                totalGames = totalGames + totalMoney//(initailCost - discountToApply)
+        except:
+            return totalMoney
     if totalGames <0:
         return 0
     else:
         return totalGames
 
-p =10000 # initail cost of game
-d =10009  # to give further discount after each purchase
-m =1000  # base price to sell
-s =180000 # total money
+p =11 # initail cost of game
+d =11  # to give further discount after each purchase
+m =1  # base price to sell
+s =9981 # total money
 
 print (howManyGames(p, d, m, s))
