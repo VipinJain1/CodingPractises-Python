@@ -15,11 +15,11 @@ def bonAppetit(bill, k, b):
     if x <=0:
         print ('Bon Appetit')
     else:
-        print (int (b - total))
+        print (abs (int (b - total)))
 
 bill =[3,10,2,9]
-bill = [2,0,0,0]
+#bill = [2,0,0,0]
 k =1
-b =0
+b =12
 
 bonAppetit(bill,k,b)
