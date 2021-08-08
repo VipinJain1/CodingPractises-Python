@@ -10,18 +10,13 @@ def countingSort(arr):
     # Write your code here
 
     result = [0] * 100
-    finalresult =[]
     
     for i in arr:
         result[i] = result[i]+1
     
-    for cnt, data in enumerate (result):
+    for  i in result:
         
         if i >0:
-            finalresult += cnt *[data]
-    return     finalresult 
-            
-            
             
         
         

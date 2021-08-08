@@ -10,9 +10,10 @@ https://www.hackerrank.com/challenges/insertionsort1/problem
 def insertionSort1(n, arr):
     ln = len(arr)
     cnt =ln
- 
+    
+     
     while (cnt):
-        if (arr[cnt] <arr[cnt-1]:
+        if (arr[cnt] <arr[cnt-1]):
             arr[cnt-1] = num
             cnt  = cnt -a
             num = arr
