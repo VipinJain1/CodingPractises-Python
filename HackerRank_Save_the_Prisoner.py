@@ -8,6 +8,9 @@ Created on Tue Aug  3 17:32:38 2021
 def saveThePrisoner(n, m, s):
     # Write your code here
     
+    # n - Prisoner - total number of chairs
+    # m - number of candies
+    # s -  starting chair
     
     if (m ==1):
          return (s) 
@@ -36,8 +39,8 @@ def saveThePrisoner(n, m, s):
         m = m-1
     return s    
 
-n = 5
-m = 2
+n = 7
+m = 19
 s = 2
     
 print (saveThePrisoner(n,m,s))
