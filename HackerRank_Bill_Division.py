@@ -5,21 +5,25 @@ Created on Wed Aug  4 22:27:14 2021
 @author: VIP
 """
 
+
 def bonAppetit(bill, k, b):
     # Write your code here
     
-    total  = round (abs(sum (bill) - bill[1])/2)
-    if total == 0:
+    if sum(bill)  ==0:
         return 0
-    x = int (b - total)
-    if x <=0:
-        print ('Bon Appetit')
+    
+    billtoPay = int (b - (sum (bill) -  bill[k])/2)
+    
+    if billtoPay <=0:
+        print ("Bon Appetit")
     else:
-        print (abs (int (b - total)))
-
+        print (billtoPay)    
+    
+    
+    
 bill =[3,10,2,9]
 #bill = [2,0,0,0]
 k =1
-b =12
+b =7
 
 bonAppetit(bill,k,b)
