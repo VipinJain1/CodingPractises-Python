@@ -5,23 +5,20 @@ Created on Tue Aug 10 12:27:06 2021
 @author: VIP
 """
 
+
 def pageCount(n, p):
     # Write your code here
-    
-    start = 0
-    end = 0
-    
-    if p > n:
+     
+    if p ==0 or n ==0:
         return 0
-    if  n-1 == p or n-2  ==p or p ==1:
-        return  0
-    else:
-        end = (n -p)//2
-        start = (p-1)//2 +1
-    if end <start:
-        return end
-    else: 
-        return start
+    
+    if n-p <=2  or p <=1:
+        return 0
+        
+    a = int((n-p)/2)
+    b = int (p/2)
+    return min(a,b)
+
         
 
 n =5
