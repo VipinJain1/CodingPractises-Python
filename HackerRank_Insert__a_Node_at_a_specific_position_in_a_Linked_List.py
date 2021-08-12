@@ -12,18 +12,19 @@ def insertNodeAtPosition(llist, data, position):
     # Write your code here
     if llist is None:
         return 0
+    
     count  = 1
     root = llist
     head = llist
+    
     while (root):
-       
         if count == position:
-            print (" I am here" )
             node = SinglyLinkedListNode(data)
             pntr =  root.next
-            root = node
+            root.next = node
             node.next =  pntr
-            return head
+               
         count  += 1
         root = root.next
-            
+    return head
+    
