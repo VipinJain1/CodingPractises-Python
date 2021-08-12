@@ -2,6 +2,8 @@
 """
 Created on Thu Aug 12 08:32:51 2021
 
+https://www.hackerrank.com/challenges/detect-whether-a-linked-list-contains-a-cycle/problem
+
 @author: VIP
 """
 
