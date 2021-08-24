@@ -55,7 +55,7 @@ player = [70,80,105]
 ranked = [100,100,50,40,40,20,10]
 player = [5,25,50,120]
 
-ranked = [34,12,40]
-player = [50,65,77,90,102]
+ranked = [100,90,90,80]
+player = [70,80,105]
 
 print (climbingLeaderboard(ranked, player))
