@@ -4,11 +4,14 @@ Created on Tue Aug 24 21:40:37 2021
 
 @author: VIP
 """
-
+import heapq
+  
 def cookies(k, A):
     # Write your code here
+    import heapq
     val = 0 
-    A = sorted(A)
+    heapq.heapify(A)
+    
     count = 0  
    
     while ( True):
@@ -17,10 +20,9 @@ def cookies(k, A):
             return count
         
         count += 1
-        val = 1*A[0] + 2* A[1]
-        A  = A[2:]
-        A.append(val)
-        A  = sorted (A)
+        val = 1* heapq.heappop(A) + 2* heapq.heappop(A)
+        heapq.heappush(A,val)
+        
         if len (A) ==0:
            return  -1
         if len (A) ==1 and A[0] < k:
