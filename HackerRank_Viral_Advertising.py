@@ -7,20 +7,20 @@ Created on Sun Aug  8 13:31:18 2021
 
 
 def viralAdvertising(n):
-    # Write your code here
-    
-   start =2
-   count  =1
-   liked =2
-   
-   while (count <=n):
-       liked = int (liked*3)
-       liked = int (liked/2)
-       count = count  +1 
-       print (liked)
-    
-   return liked 
+    import math
+    start  =5
+    day =1
+    while (day<n):
+        
+        adv = math.floor(start/2)
+        total  = adv + start
+        start = adv
+        day = day +1
+        
+      
+       
+    return total     
 
-n=5
+n=4
 print (viralAdvertising(n))
     
