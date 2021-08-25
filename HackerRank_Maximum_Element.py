@@ -7,7 +7,6 @@ Created on Tue Aug 24 22:51:27 2021
 
 
 
-
 def getMax(operations):
     # Write your code here
     #print (operations)
