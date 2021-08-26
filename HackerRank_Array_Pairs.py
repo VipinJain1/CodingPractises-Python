@@ -12,12 +12,11 @@ def solve(arr):
     for  i in range (len(arr)):
        
         for j in  range (i+1,len(arr)):
-            mx = max(arr[i:j]
-            if (i <j and (arr[i]*arr[j] <= mx)) :
+            mx = max(arr[i:j])
+            if (i <j and (arr[i]*arr[j] <= mx)):
                 count +=1
                 
     return count
-
 
 
 arr = [1, 1 ,2, 4, 2]    

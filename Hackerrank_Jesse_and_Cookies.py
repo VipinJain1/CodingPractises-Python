@@ -15,7 +15,7 @@ def cookies(k, A):
     count = 0  
    
     while ( True):
-        if all ( y > k for y in A):
+        if all ( y >= k for y in A):
             return count
         
         count += 1
