@@ -22,6 +22,8 @@ https://leetcode.com/problems/reverse-vowels-of-a-string/
 """
 
 s ="A man, a plan, a canal: Panama"
+s ='hello'
+
 s1 = list(s)
 v = ['a','e','i','o','u']
 l =  len (s) -1
