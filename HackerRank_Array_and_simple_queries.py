@@ -15,9 +15,9 @@ def arrayQueries(arr,queries ):
         new =  arr[start:end]
         del arr[start:end]
         
+            arr = new
         if query[0] ==1:
             new.extend (arr)
-            arr = new
             #print (arr)
         else:
             arr.extend (new)
