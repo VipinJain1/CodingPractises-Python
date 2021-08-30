@@ -30,7 +30,7 @@ nums = [1,1,2]
 nums = [0,0,1,1,1,2,2,3,3,4]
 nums = [1,1]
 nums = [1,1,2]
-
+"""
 class Solution:
     def removeDuplicates(self, nums: List[int]) -> int:
         d  = dict()
@@ -45,7 +45,7 @@ class Solution:
             nums[i] = new [i]
         return (len(new))    
 
-
+"""
 
 """
 n = len (nums)
@@ -67,5 +67,32 @@ print (cnt)
 print (nums[0:cnt])   
     
 """
-    
-    
+ 
+class Solution:
+    def removeDuplicates(self, nums: List[int]) -> int:
+        
+        ln   = len(nums)
+        if ln ==1:
+            return 1
+        
+        if ln  ==0:
+            return 0
+        
+        count =1
+        for i in range (1,ln):
+            if nums[i-1] == nums[i] and i<ln:
+                while ( nums[i-1] == nums[i]):
+                    i = i+1
+                    if i >= ln:
+                        break
+            else:
+                nums[count] = nums[i]
+                count +=1
+        return count  
+
+ 
+
+nums = [1,1,2]
+print (removeDuplicates(nums))
+
+
