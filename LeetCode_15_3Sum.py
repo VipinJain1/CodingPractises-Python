@@ -5,6 +5,7 @@ Created on Sun Aug 29 21:28:07 2021
 @author: VIP
 """
 
+"""
 def threeSum (nums):
         ln = len(nums)
         
@@ -23,6 +24,9 @@ def threeSum (nums):
                             res.append (data)
                     
         return res
+
+"""
+
     
     
     
