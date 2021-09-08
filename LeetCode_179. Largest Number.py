@@ -5,6 +5,7 @@ Created on Wed Sep  8 01:36:09 2021
 @author: VIP
 """
 
+# NOT WORKING
 def largestNumber(A):
     ln = len(nums)
     if ln ==0:
@@ -31,8 +32,9 @@ def largestNumber(A):
             data = sorted(list (map(str,dct[cnt])))[::-1]
             if len(data) >=2:
                 for i in range (0, len(data) -1):
-                    if int(data[i] + data[i+1]) <  int(data[i+1] + data[i]):
-                        data[i],data[i+1] = data[i+1], data[i]
+                    for j in range (i+1,len(data)-1):
+                        if int(data[i] + data[j]) <  int(data[j] + data[i]):
+                            data[i],data[j] = data[j], data[i]
 
             lst = "".join([elm for elm in data])
             st = st + lst
@@ -43,4 +45,5 @@ def largestNumber(A):
 
 nums = [3,30,34,6,9]
 nums  = [10]
+nums = [74,21,33,51,77,51,90,60,5,56]
 print (largestNumber(nums))
