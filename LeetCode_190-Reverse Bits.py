@@ -5,7 +5,7 @@ Created on Mon Sep  6 09:27:05 2021
 @author: VIP
 """
 
-class Solution:
+fclass Solution:
     def reverseBits(self, n: int) -> int:
         b =0
         cnt = 0

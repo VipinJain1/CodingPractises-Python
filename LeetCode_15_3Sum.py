@@ -28,7 +28,29 @@ def threeSum (nums):
 """
 
     
+def threeSum (nums):
+    ln = len(nums)
+    if ln < 3:
+        return None
     
+    d = dict()
+    res  = []
+    
+    for cnt, i in enumerate (nums):
+        if i not in d.keys():
+            d[i] = [cnt]
+        else:
+            d[i].append(cnt)
+    
+    print (d)
+    for ii in range(0,ln):
+        for j in range (ii+1, ln):
+            nm = 0 - (nums[ii] + nums [j])
+            if nm in d.keys():
+                if ii!=j and ii not in (d[nm]) and j not in (d[nm]):
+                    res.append([nums[ii], nums[j],nm])
+    return res
+     
     
 nums = [-1,0,1,2,-1,-4]
 print (threeSum (nums))
