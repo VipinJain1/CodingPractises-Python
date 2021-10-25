@@ -1,30 +1,35 @@
 # -*- coding: utf-8 -*-
 """
-Created on Sat Oct 23 15:14:14 2021
-
-Sort stack uisng Recursion
+Created on Sun Oct 24 08:33:50 2021
 
 @author: VIP
 """
 
-def insertStack(data,temp):
-    ln = len(data)
-    if ln ==0 or data[-1] < temp:
-        data.append(temp)
-        return
-    val = data.pop()
-    insertStack(data,temp)
-    data.append(val)
-    
-def sortStack(data):
-    ln = len(data)
-    if ln ==0:
-        return 
-    temp = data.pop()
-    sortStack(data)
-    insertStack(data,temp)
 
-# data to store into list
-stackdata = [9,0,1,2,3,56,0,6,-1,6]
-sortStack(stackdata)
-print (stackdata)
+def threeSum(nums):
+     ln = len(nums)
+     if ln <3:
+         return
+     d  =dict()
+     res = set()
+     for i in range (0,ln):
+         for j in range (i+1, ln):
+             sm = nums[i] + nums[j]
+             if sm in d.keys():
+                 d[sm] += [(i,j)]
+             else:
+                 d[sm] = [(i,j)]
+     #print (d)
+     for i in range (0,ln):
+         val = -nums[i]
+         if  val in d.keys():
+             for data in d[val]:
+                 if i not in data:
+                     row = tuple(sorted([nums[i], nums[data[0]],nums [data[1]]]))
+                     res.add(row)
+     return res
+             
+       
+nums = [-1,0,1,2,-1,-4]     
+res= threeSum(nums)      
+print (res)
