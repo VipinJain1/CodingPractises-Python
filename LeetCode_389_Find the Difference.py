@@ -1,28 +1,43 @@
 # -*- coding: utf-8 -*-
 """
-Created on Sun Sep 12 11:15:03 2021
+Created on Wed Oct 27 08:24:02 2021
 
 @author: VIP
 """
-
-def findTheDifference(s,t):
- 
-    ls = len(s)
-    lt = len (t)
+class Solution:
+    def findTheDifference(self, s: str, t: str) -> str:
+        
+        ln = len(t)
+        if ln ==0:
+            return
+      
+        dt = dict()
+        ds = dict()
     
-    s1  =[]
-    t1  =[]
-    s1[:] = (s)
-    print (s1)
-  
-    t1[:] =  (t)
-    print (t1)
+        for i in s:
+            if i  in ds.keys():
+                ds[i] +=1
+            else:
+                ds[i] =1
     
-    print (t1[ls:])
-    return "".join(t1[ls:])
+        for i in t:
+            if i  in dt.keys():
+                dt[i] +=1
+            else:
+                dt[i] =1
+        found = False
+        for key,val in dt.items():
+            if key in ds.keys() and dt[key] !=ds[key]:
+                found = True
+                return key
+            elif key not in ds.keys():
+                return key
+            
+                 
+        return found     
+            
     
-    
-
-s= ""
-t ='z'
-print (findTheDifference(s,t))
+s = "giyklhfesfeertwertgrfqwperowqroqegrkeyweyy"
+t = "giyklhfesfeertwertgrfqwperowqproqegrkeyweyy"
+sol = Solution()
+print (sol.findTheDifference(s,t))
