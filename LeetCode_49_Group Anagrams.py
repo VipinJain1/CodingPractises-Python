@@ -1,28 +1,25 @@
 # -*- coding: utf-8 -*-
 """
-Created on Wed Sep  1 23:24:02 2021
+Created on Sun Oct 31 08:37:19 2021
 
 @author: VIP
 """
 
+class Solution:
+ def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
 
-def groupAnagrams(strs):
-    
-    ln  = len(strs)
-    if ln <=1:
-        return [strs]
-    d = {}
-    for i  in strs:
-        s = "".join (sorted (i))
-        if s in d.keys():
-            d[s].append(i)
-        else:
-            d[s] = [i]
-        
-    return d.values()
-    
+ d = dict()
+ for i in strs:
 
-strs = ["eat","tea","tan","ate","nat","bat"]
-strs = [""]
+ data= "".join(sorted(i))
+ if data in d.keys():
+ d[data] += [i] 
+ else:
+ d[data] =[i]
+ print (d)
+ res=[]
+ for i, val in d.items():
+ res.append (val)
+ return res
 
-print (groupAnagrams(strs))
+Sent with a Spark

@@ -52,5 +52,6 @@ def findSubstring(s, words):
 
 s = "wordgoodgoodgoodbestword"
 words = ["word","good","best","good"]
-
+s = "barfoofoobarthefoobarman"
+words = ["foo", "bar"]
 print (findSubstring(s, words))
