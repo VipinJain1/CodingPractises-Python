@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Created on Mon Nov 15 14:11:27 2021
+Created on Wed Nov 17 17:00:42 2021
 
 @author: VIP
 """
@@ -34,5 +34,3 @@ class Solution:
         for i in tempResut:
             result.append( "".join(i))
         return result 
-    
-        
