@@ -1,34 +1,29 @@
 # -*- coding: utf-8 -*-
 """
-Created on Thu Dec  2 14:19:44 2021
+Created on Fri Dec  3 07:24:12 2021
 
 @author: VIP
 """
 
 class FirstUnique:
-    from queue import Queue
     from collections import defaultdict
     def __init__(self, nums: List[int]):
-        self.queue= Queue(int)
+        self.queue= []
         self.d = defaultdict(int)
-        self.queue.put(nums)
+        self.queue.extend(nums)
         for i in nums:
-            d[i] +=1
-            
-        #print (self.queue)
-        
+            self.d[i] +=1
+
     def showFirstUnique(self) -> int:
-        found = False
-        while (Qsize(self.queue >1):
+        #print (self.d)
+        if 1 not in self.d.values():
+            return -1
+        for i in self.queue:
             if self.d[i] ==1:
                 return i
         return -1
         
     def add(self, value: int) -> None:
         self.queue.append(value)
-        if value in self.d.keys():
-            self.d[value] +=1
-        else:
-            self.d[value] =1
-        #print (self.queue)
+        self.d[value] +=1
         
