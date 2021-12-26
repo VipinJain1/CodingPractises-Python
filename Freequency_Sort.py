@@ -4,13 +4,10 @@ Created on Sat Oct 16 14:40:10 2021
 
 @author: VIP
 """
-
 def frequency_sort(a):
-    
-    ln = len(a) 
+    ln = len(a)
     if ln <=1:
         return a 
-
     d  = dict()
     for i  in a :
         if i  in d.keys():
@@ -34,8 +31,6 @@ def frequency_sort(a):
         result.extend(repeat(i[0], i[1] ))
       
     return result 
-    
+# Program starts here
 a = [1,1,2,3,4,5,5,66,2,3,4,1,2,3,4]
-
-
 print (frequency_sort(a))
