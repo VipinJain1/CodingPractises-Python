@@ -7,7 +7,6 @@ Created on Sun Oct 17 08:10:57 2021
 @author: VIP
 """
 
-
 def knapsack(a, w,v,n,t):
     
     if w ==0 or n ==0:
@@ -21,13 +20,11 @@ def knapsack(a, w,v,n,t):
     else:
         t[n][w] = knapsack(a, w,v,n-1,t)
         return t[n][w]
-
 w =10
 a = [2,3,5,6,7,9]
 v = [1,4,5,7,5,3]
 n = len(a) 
 t = [[-1] * (w+1)] * (n+1)
 print (knapsack(a,w,v,n,t))
-
 print ('done')
 
